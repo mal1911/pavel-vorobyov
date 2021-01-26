@@ -1,0 +1,97 @@
+@mixin media-tablet {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @content;
+  }
+}
+
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+/*
+@mixin container() {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  @include media-tablet {
+    width: 100%;
+    min-width: 320px;
+  }
+}
+*/
+
+@mixin menu() {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+  @content;
+}
+/*
+
+@mixin button($background-color: transparent, $border-color: transparent) {
+  background-color: $background-color;
+  transition-duration: 500ms;
+  transition-property: opacity;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  max-width: 300px;
+  overflow: hidden;
+  border: 1px solid $border-color;
+
+
+  &:hover,
+  &:active {
+    box-shadow: 0 2px 4.75px 0.25px rgba(0, 255, 215, 0.6);
+    opacity: 0.7;
+  }
+  @content;
+
+  @include media-mobile {
+    width: 100%;
+    max-width: none;
+  }
+}
+*/
+
+@mixin font-raleway-regular {
+  font-weight: 400;
+  font-family: $font-raleway;
+}
+
+@mixin font-raleway-medium {
+  font-weight: 500;
+  font-family: $font-raleway;
+}
+
+@mixin font-raleway-semibold {
+  font-weight: 600;
+  font-family: $font-raleway;
+}
