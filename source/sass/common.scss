@@ -12,9 +12,9 @@ body {
 
   font-size: 10px;
   line-height: 25px;
-  color: $color-black;
+  //color: $color-black;
 
-  @include font-roboto-regular();
+  @include font-raleway-regular();
 }
 
 main {

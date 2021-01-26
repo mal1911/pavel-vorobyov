@@ -1,0 +1,45 @@
+.header {
+  z-index: 1;
+//  background-color: $color-motivation;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+
+  height: 900px;
+
+  background-image: url("../img/background-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/background-desktop@2x.png");
+  }
+/*
+  @include media-tablet {
+    height: 686px;
+
+    background-image: url("../img/background-tablet@1x.png");
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/background-tablet@2x.png");
+    }
+  }
+  @include media-mobile {
+    height: 647px;
+
+    background-image: url("../img/background-mobile@1x.png");
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/background-mobile@2x.png");
+    }
+  }*/
+}
